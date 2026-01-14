@@ -5,15 +5,15 @@ import Image from "next/image";
 
 export default function Home() {
   const sites = [
-    { name: "Weehena Farms", url: "https://weehenafarms.com" },
-    { name: "Weehena Sausage", url: "https://weehenasausage.lk" },
+    { name: "Weehena Farms", url: "https://weehenafarms.com", img: "" },
+    { name: "Weehena Sausage", url: "https://weehenasausage.lk", img: "" },
   ];
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0, y: -75 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2, ease: "easeOut" }}
+      transition={{ duration: 3, ease: "easeOut" }}
       className="flex flex-col justify-center md:mx-auto bg-center bg-black/50 min-w-screen min-h-screen bg-cover bg-blend-darken"
       style={{ backgroundImage: "url('/assets/company2.jpg')" }}
     >
@@ -32,7 +32,8 @@ export default function Home() {
           height={200}
           className="mx-auto my-10"
         />
-        <h1 className="flex mx-10 justify-center drop-shadow-2xl text-center text-5xl font-sans font-bold mb-10 text-red-white ">
+        {/* heading w-100 h-35 */}
+        <h1 className="flex mx-auto   justify-center drop-shadow-2xl text-center text-5xl font-sans font-bold mb-10 text-red-white ">
           WEEHENA GROUP OF COMPANIES
         </h1>
       </motion.div>
