@@ -25,6 +25,7 @@ export default function Home() {
           scale: { type: "spring", visualDuration: 2, bounce: 0.5 },
         }}
       >
+        {/* Weehena Logo */}
         <Image
           src="/assets/weehenaLogo.png"
           alt="Company Logo"
@@ -32,12 +33,13 @@ export default function Home() {
           height={200}
           className="mx-auto my-10"
         />
-        {/* heading w-100 h-35 */}
+        {/* heading (w-100 h-35) */}
         <h1 className="flex mx-auto   justify-center drop-shadow-2xl text-center text-5xl font-sans font-bold mb-10 text-red-white ">
           WEEHENA GROUP OF COMPANIES
         </h1>
       </motion.div>
 
+      {/* Site Card */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
