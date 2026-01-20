@@ -88,58 +88,79 @@ export default function Home() {
             <SiteCard key={site.name} {...site} />
           ))}
         </motion.div>
-        <div className=" bottom-0 content-center px-10 xl:px-10 md:pt-10 pb-10 mx-auto w-fit mt-10 xl:w-fit   my-auto">
+
+        {/* Other Companies Logos */}
+
+        <div className="bottom-0 content-center px-10 xl:px-10 md:pt-10 pb-10 mx-auto w-fit mt-10 xl:w-fit   my-auto">
           <div className="grid mt-10 xl:mt-0 md:grid-cols-5 justify-center gap-10">
-            <div className="w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition">
+            {/* company 1 */}
+            <div className=" w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition">
               <Image
                 width={200}
                 height={200}
                 alt="logos"
                 src={"/assets/hotelLogo.png"}
-                className="bg-white size-20 xl:size-30 "
+                className="bg-white mx-auto size-20 xl:size-30 "
               />
-              <p className="text-white font-semibold font-sans text-md">company name</p>
+              <p className="text-white font-semibold font-sans text-md">
+                company name
+              </p>
             </div>
+
+            {/* company 2 */}
             <div className="w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition">
               <Image
                 width={200}
                 height={200}
                 alt="logos"
                 src={"/assets/hotelLogo.png"}
-                className="bg-white size-20 xl:size-30"
+                className="bg-white mx-auto size-20 xl:size-30"
               />
-              <p className="text-white font-semibold font-sans text-md">company name</p>
+              <p className="text-white font-semibold font-sans text-md">
+                company name
+              </p>
             </div>
+
+            {/* Company 3 */}
             <div className="w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition">
               <Image
                 width={200}
                 height={200}
                 alt="logos"
                 src={"/assets/hotelLogo.png"}
-                className="bg-white size-20 xl:size-30"
-                //bg-white size-20 xl:size-30 hover:shadow-2xl  hover:shadow-red-100 duration-300 transform hover:scale-110 ease-in-out transition
+                className="bg-white mx-auto size-20 xl:size-30"
               />
-              <p className="text-white font-semibold font-sans text-md">company name</p>
+              <p className="text-white font-semibold font-sans text-md">
+                company name
+              </p>
             </div>
+
+            {/* company 4 */}
             <div className="w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition">
               <Image
                 width={200}
                 height={200}
                 alt="logos"
                 src={"/assets/hotelLogo.png"}
-                className="bg-white size-20 xl:size-30 "
+                className="bg-white mx-auto size-20 xl:size-30 "
               />
-              <p className="text-white font-semibold font-sans text-md">company name</p>
+              <p className="text-white font-semibold font-sans text-md">
+                company name
+              </p>
             </div>
+
+            {/* Company 5 */}
             <div className="w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition">
               <Image
                 width={200}
                 height={200}
                 alt="logos"
                 src={"/assets/hotelLogo.png"}
-                className="bg-white size-20 xl:size-30 "
+                className="bg-white mx-auto size-20 xl:size-30 "
               />
-              <p className="text-white font-semibold font-sans text-md">company name</p>
+              <p className="text-white font-semibold font-sans text-md">
+                company name
+              </p>
             </div>
           </div>
         </div>
