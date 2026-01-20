@@ -2,6 +2,7 @@
 import SiteCard from "@/components/SiteCard";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
   const sites = [
@@ -9,59 +10,48 @@ export default function Home() {
       name: "Weehena Farms",
       url: "https://weehenafarms.com",
       img: "/assets/farmslogo.png",
-      h2: " text-xl w-70 text-left font-sans text-red-900  font-bold",
-      p: " text-xs w-70 text-left font-sans font-semibold text-gray-600",
-      cName: "",
     },
     {
       name: "Weehena Sausage",
       url: "https://weehenasausage.lk",
       img: "/assets/sausagelogo.png",
-      h2: " text-xl w-70 text-left font-sans text-red-900  font-bold",
-      p: " text-xs w-70 text-left font-sans font-semibold text-gray-600",
-      cName: "",
     },
     {
       name: "Winchester Little England",
       url: "https://www.winchesterlk.com/",
       img: "/assets/hotelLogo.png",
-      h2: " text-xl w-70 text-left font-sans text-red-900  font-bold",
-      p: " text-xs w-70 text-left font-sans font-semibold text-gray-600",
-      cName: "",
     },
     {
       name: "Weehena Animal Nutrition (Pvt) Ltd",
       url: "https://maps.app.goo.gl/ToMuVMiqWfCZrRg79",
       img: "/assets/wanLogo.jpg",
-      h2: " text-xl w-70 text-left font-sans text-red-900  font-bold",
-      p: " text-xs w-70 text-left font-sans font-semibold text-gray-600",
-      cName: "",
     },
     {
       name: "Classy Missy.LK",
       url: "https://www.facebook.com/p/Classy-MissyLk-100064036170534/",
       img: "/assets/classyMissyLogo.jpg",
-      h2: " text-xl w-70 text-left font-sans text-red-900  font-bold",
-      p: " text-xs w-70 text-left font-sans font-semibold text-gray-600",
-      cName: "",
     },
   ];
+
+  // const isMobile = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <motion.div
       initial={{ opacity: 0, y: -75 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 3, ease: "easeOut" }}
-      className="flex flex-col justify-center md:mx-auto py-10 bg-center bg-black/50 min-w-screen min-h-screen bg-cover bg-blend-darken"
+      className=" flex flex-col justify-center md:mx-auto py-10 bg-center bg-black/50 min-w-screen min-h-screen  bg-cover bg-blend-darken"
       style={{ backgroundImage: "url('/assets/company2.jpg')" }}
     >
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
+        initial={isDesktop? { opacity: 0, scale: 0 }: false}
+        animate={isDesktop? { opacity: 1, scale: 1 } : false }
+        transition={isDesktop? {
           duration: 2,
           scale: { type: "spring", visualDuration: 2, bounce: 0.5 },
-        }}
+        }:undefined}
+        className="w-fit mx-auto"
       >
         {/* Weehena Logo */}
         <Image
@@ -69,23 +59,26 @@ export default function Home() {
           alt="Company Logo"
           width={200}
           height={200}
-          className="mx-auto my-10 drop-shadow-2xl drop-shadow-black bg-white/90 rounded-full"
+          className="w-30 h-30 md:w-40 md:h-40 lg:w-50 lg:h-50 xl:w-50 xl:h-50 mx-auto my-10 drop-shadow-2xl drop-shadow-black bg-white/90 rounded-full"
         />
         {/* heading (w-100 h-35) */}
-        <h1 className="flex mx-auto border-4 border-red-900 w-fit px-5 py-2 text-white justify-center drop-shadow-xl drop-shadow-black text-center text-5xl font-sans font-bold mb-10 text-red-white transition ">
+        <h1 className="flex mx-10 md:mx-auto w-fit sm:w-fit md:w-fit px-2 md:px-4 border-4 border-red-900 py-1 text-white justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
           WEEHENA GROUP OF COMPANIES
         </h1>
       </motion.div>
 
-      {/* Site Card */}
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 2,
-          scale: { type: "spring", visualDuration: 2, bounce: 0.5 },
-        }}
-        className="grid justify-items-center xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 mx-auto gap-6 drop-shadow-2xl mt-5 "
+        initial={isDesktop ? { opacity: 0, scale: 0 } : false}
+        animate={isDesktop ? { opacity: 1, scale: 1 } : false}
+        transition={
+          isDesktop
+            ? {
+                duration: 2,
+                scale: { type: "spring", visualDuration: 2, bounce: 0.5 },
+              }
+            : undefined //{ duration: 5, delay: 5 }
+        }
+        className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 mx-auto gap-4 drop-shadow-2xl mt-5"
       >
         {sites.map((site) => (
           <SiteCard key={site.name} {...site} />
