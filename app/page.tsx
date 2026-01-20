@@ -33,7 +33,6 @@ export default function Home() {
     },
   ];
 
-  // const isMobile = useMediaQuery({ query: "(min-width: 768px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
