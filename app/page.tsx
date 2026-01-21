@@ -123,13 +123,13 @@ export default function Home() {
         </motion.div>
 
         {/* Other companies */}
-        <div className=" bg-amber-300 bottom-0 content-center px-10 xl:px-10 md:pt-10 pb-10 mx-auto w-fit mt-10 xl:w-fit my-auto">
-          <div className="bg-amber-700 grid mt-10 xl:mt-0 md:grid-cols-5 justify-center gap-10">
+        <div className="bottom-0 content-center px-10 xl:px-0 md:pt-10 pb-10 mx-auto w-fit mt-10 xl:w-fit my-auto">
+          <div className="grid mt-10 xl:mt-0 md:grid-cols-5 justify-center gap-10">
             {otherCompanies.map((company) => (
               <div
                 key={company.name}
                 {...company}
-                className=" bg-blue-400 w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition"
+                className="w-fit hover:shadow-2xl duration-300 transform hover:scale-110 ease-in-out transition"
               >
                 <Image
                   width={200}
