@@ -75,7 +75,7 @@ export default function Home() {
         initial={mounted && isDesktop ? { opacity: 0, y: -75 } : undefined}
         animate={mounted && isDesktop ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 3, ease: "easeOut" }}
-        className="relative content-center flex flex-col justify-center mx-auto md:mx-auto py-10 bg-center bg-black/50 min-w-screen min-h-screen bg- bg-blend-darken"
+        className="relative content-center flex flex-col justify-center mx-auto md:mx-auto py-10 bg-center bg-black/50 min-w-screen min-h-screen bg-cover bg-blend-darken"
         style={{ backgroundImage: "url('/assets/company2.jpg')" }}
       >
         <motion.div
@@ -100,7 +100,7 @@ export default function Home() {
             className="w-30 h-30 md:w-40 md:h-40 lg:w-50 lg:h-50 xl:w-50 xl:h-50 mx-auto my-10 drop-shadow-2xl drop-shadow-black bg-white/90 rounded-full"
           />
           {/* heading (w-100 h-35) */}{" "}
-          <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 border-4 text-white border-red-900/90 py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
+          <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 text-white  py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
             WEEHENA GROUP OF COMPANIES{" "}
           </h1>
         </motion.div>
@@ -136,7 +136,7 @@ export default function Home() {
                   height={1000}
                   alt="logos"
                   src={company.img}
-                  className="xl:hover:shadow-2xl xl:duration-300 xl:transform xl:hover:scale-110 xl:ease-in-out transition mx-auto bg-white/90 rounded-sm w-auto h-20 object-fill"
+                  className="xl:duration-300 xl:transform xl:hover:scale-110 xl:ease-in-out transition mx-auto rounded-sm w-auto h-20 object-fill"
                 />
                 <p
                   className="mx-auto text-white 
