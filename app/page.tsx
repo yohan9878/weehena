@@ -99,7 +99,7 @@ export default function Home() {
             height={200}
             className="w-30 h-30 md:w-40 md:h-40 lg:w-50 lg:h-50 xl:w-50 xl:h-50 mx-auto my-10 drop-shadow-2xl drop-shadow-black bg-white/90 rounded-full"
           />
-          {/* heading (w-100 h-35) */}{" "}
+
           <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 text-white  py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
             WEEHENA GROUP OF COMPANIES{" "}
           </h1>
@@ -123,30 +123,58 @@ export default function Home() {
         </motion.div>
 
         {/* Other companies */}
-        <div className="bottom-0 content-center px-10 xl:px-0 md:pt-10 pb-10 mx-auto mt-10 my-auto">
-          <div className="grid mt-10 xl:mt-0 lg:grid-cols-5 justify-center gap-10">
-            {otherCompanies.map((company) => (
-              <div
-                key={company.name}
-                {...company}
-                className="xl:duration-300 xl:transform xl:hover:scale-110 xl:ease-in-out transition"
-              >
-                <Image
-                  width={1000}
-                  height={1000}
-                  alt="logos"
-                  src={company.img}
-                  className="xl:duration-300 xl:transform xl:hover:scale-110 xl:ease-in-out transition mx-auto rounded-sm w-auto h-20 object-fill"
-                />
-                <p
-                  className="mx-auto text-white 
-                 text-center font-semibold font-mono xl:text-lg lg:text-md md:text-sm mt-2 text-shadow-2xl"
+        <div className="bottom-0 content-center px-10 xl:px-0 md:pt-10 pb-10 mx-auto mt-10 my-auto w-full overflow-hidden">
+          {/* DESKTOP Infinite Scroll */}
+          {isDesktop && (
+            <motion.div
+              className="flex gap-16 w-max"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                duration: 25,
+                ease: "linear",
+                repeat: Infinity,
+                delay: 4,
+              }}
+            >
+              {[...otherCompanies, ...otherCompanies].map((company, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center xl:duration-300 xl:transform xl:hover:scale-110 transition"
                 >
-                  {company.name}
-                </p>
-              </div>
-            ))}
-          </div>
+                  <Image
+                    src={company.img}
+                    alt={company.name}
+                    width={200}
+                    height={200}
+                    className="h-20 w-auto object-contain rounded-sm"
+                  />
+                  <p className="mt-2 text-white text-center font-semibold font-mono text-lg text-shadow-2xl">
+                    {company.name}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+          )}
+
+          {/* MOBILE  Grid */}
+          {!isDesktop && (
+            <div className="grid mt-10 lg:grid-cols-5 justify-center gap-10">
+              {otherCompanies.map((company) => (
+                <div key={company.name} className="transition">
+                  <Image
+                    width={1000}
+                    height={1000}
+                    alt={company.name}
+                    src={company.img}
+                    className="mx-auto rounded-sm w-auto h-20 object-fill"
+                  />
+                  <p className="mx-auto text-white text-center font-semibold font-mono text-sm mt-2 text-shadow-2xl">
+                    {company.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </motion.div>
     </div>
