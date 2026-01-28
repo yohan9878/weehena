@@ -63,7 +63,7 @@ const otherCompanies = [
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
+  const isDesktop = useMediaQuery({ minWidth: 1536 });
 
   useEffect(() => setMounted(true), []);
 
@@ -101,7 +101,7 @@ export default function Home() {
           />
 
           <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 text-white  py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
-            WEEHENA GROUP OF COMPANIES{" "}
+            WEEHENA GROUP OF COMPANIES
           </h1>
         </motion.div>
         <motion.div
@@ -115,7 +115,7 @@ export default function Home() {
                 }
               : undefined
           }
-          className="grid xl:justify-stretch xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 w-fit mx-auto gap-8 drop-shadow-2xl mt-5"
+          className="grid 2xl:justify-stretch 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 w-fit mx-auto gap-8 drop-shadow-2xl mt-5"
         >
           {sites.map((site) => (
             <SiteCard key={site.name} {...site} />
@@ -133,7 +133,7 @@ export default function Home() {
                 duration: 25,
                 ease: "linear",
                 repeat: Infinity,
-                delay: 4,
+                delay: 3.5,
               }}
             >
               {[...otherCompanies, ...otherCompanies].map((company, index) => (
@@ -148,7 +148,7 @@ export default function Home() {
                     height={200}
                     className="h-20 w-auto object-contain rounded-sm"
                   />
-                  <p className="mt-2 text-white text-center font-semibold font-mono text-lg text-shadow-2xl">
+                  <p className="mt-2 text-white w-80 xl:w-100 text-center font-semibold font-mono text-lg text-shadow-2xl">
                     {company.name}
                   </p>
                 </div>
@@ -158,7 +158,7 @@ export default function Home() {
 
           {/* MOBILE  Grid */}
           {!isDesktop && (
-            <div className="grid mt-10 lg:grid-cols-5 justify-center gap-10">
+            <div className="grid mt-10 xl:grid-cols-5 justify-center gap-10">
               {otherCompanies.map((company) => (
                 <div key={company.name} className="transition">
                   <Image
