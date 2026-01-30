@@ -41,7 +41,7 @@ const sites = [
 const otherCompanies = [
   {
     name: "Weehena Farms (Pvt) Ltd",
-    img: "/assets/weehenaFarmsLogo.jpg",
+    img: "/assets/weehenaFarmsLogoBgremoved.png",
   },
   {
     name: "Weehena Agricultural State (Pvt) Ltd",
