@@ -49,11 +49,11 @@ const otherCompanies = [
   },
   {
     name: "Weehena State (Pvt) Ltd",
-    img: "/assets/stateLogo.jpg",
+    img: "/assets/stateBgremoved.png",
   },
   {
     name: "St. Anthony's Forage Stores (Pvt) Ltd",
-    img: "/assets/storesLogo.jpg",
+    img: "/assets/storesLogoBgremoved.png",
   },
   {
     name: "Bio Recycle (Pvt) Ltd",
@@ -76,7 +76,7 @@ export default function Home() {
         animate={mounted && isDesktop ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 3, ease: "easeOut" }}
         className="relative content-center flex flex-col justify-center mx-auto md:mx-auto py-10 bg-center bg-black/50 min-w-screen min-h-screen bg-cover bg-blend-darken"
-        style={{ backgroundImage: "url('/assets/company2.jpg')" }}
+        style={{ backgroundImage: "url('/assets/companyRainbow.png')" }}
       >
         <motion.div
           initial={mounted && isDesktop ? { opacity: 0, scale: 0 } : undefined}
@@ -130,29 +130,31 @@ export default function Home() {
               className="flex gap-16 w-max"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
-                duration: 25,
+                duration: 50,
                 ease: "linear",
                 repeat: Infinity,
                 delay: 3.5,
               }}
             >
-              {[...otherCompanies, ...otherCompanies].map((company, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center xl:duration-300 xl:transform xl:hover:scale-110 transition"
-                >
-                  <Image
-                    src={company.img}
-                    alt={company.name}
-                    width={200}
-                    height={200}
-                    className="h-20 w-auto object-contain rounded-sm"
-                  />
-                  <p className="mt-2 text-white w-80 xl:w-100 text-center font-semibold font-mono text-lg text-shadow-2xl">
-                    {company.name}
-                  </p>
-                </div>
-              ))}
+              {[...otherCompanies, ...otherCompanies, ...otherCompanies].map(
+                (company, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center xl:duration-300 xl:transform xl:hover:scale-110 transition"
+                  >
+                    <Image
+                      src={company.img}
+                      alt={company.name}
+                      width={200}
+                      height={200}
+                      className="h-20 w-auto object-contain rounded-sm"
+                    />
+                    <p className="mt-2 text-white w-80 xl:w-100 text-center font-semibold font-mono text-lg text-shadow-2xl">
+                      {company.name}
+                    </p>
+                  </div>
+                ),
+              )}
             </motion.div>
           )}
 
