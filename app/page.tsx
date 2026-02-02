@@ -44,15 +44,15 @@ const otherCompanies = [
     img: "/assets/weehenaFarmsLogoBgremoved.png",
   },
   {
-    name: "Weehena Agricultural State (Pvt) Ltd",
+    name: "Weehena Agricultural Estate (Pvt) Ltd",
     img: "/assets/agriculturalStateLogo.png",
   },
   {
-    name: "Weehena State (Pvt) Ltd",
+    name: "Weehena Estate (Pvt) Ltd",
     img: "/assets/stateBgremoved.png",
   },
   {
-    name: "St. Anthony's Forage Stores (Pvt) Ltd",
+    name: "St. Anthony's Forages Stores (Pvt) Ltd",
     img: "/assets/storesLogoBgremoved.png",
   },
   {
