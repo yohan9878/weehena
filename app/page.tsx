@@ -46,20 +46,20 @@ const otherCompanies = [
     img: "/assets/stateBgremoved.png",
   },
   {
-    name: "St. Anthony's Forages Stores (Pvt) Ltd",
-    img: "/assets/storesLogoBgremoved.png",
-  },
-  {
-    name: "Bio Recycle (Pvt) Ltd",
-    img: "/assets/bioRecycleLogo.jpg",
+    name: "Classy Missy.LK",
+    img: "/assets/classyMissyLogo.jpg",
   },
   {
     name: "Winchester Little England",
     img: "/assets/hotelLogoBg.png",
   },
   {
-    name: "Classy Missy.LK",
-    img: "/assets/classyMissyLogo.jpg",
+    name: "Bio Recycle (Pvt) Ltd",
+    img: "/assets/bioRecycleLogo.jpg",
+  },
+  {
+    name: "St. Anthony's Forages Stores (Pvt) Ltd",
+    img: "/assets/storesLogoBgremoved.png",
   },
 ];
 
