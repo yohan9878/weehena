@@ -46,20 +46,20 @@ const otherCompanies = [
     img: "/assets/stateBgremoved.png",
   },
   {
-    name: "St. Anthony's Forages Stores (Pvt) Ltd",
-    img: "/assets/storesLogoBgremoved.png",
-  },
-  {
-    name: "Bio Recycle (Pvt) Ltd",
-    img: "/assets/bioRecycleLogo.jpg",
+    name: "Classy Missy.LK",
+    img: "/assets/classyMissyLogo.jpg",
   },
   {
     name: "Winchester Little England",
     img: "/assets/hotelLogoBg.png",
   },
   {
-    name: "Classy Missy.LK",
-    img: "/assets/classyMissyLogo.jpg",
+    name: "Bio Recycle (Pvt) Ltd",
+    img: "/assets/bioRecycleLogo.jpg",
+  },
+  {
+    name: "St. Anthony's Forages Stores (Pvt) Ltd",
+    img: "/assets/storesLogoBgremoved.png",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function Home() {
             className="w-30 h-30 md:w-40 md:h-40 lg:w-50 lg:h-50 xl:w-50 xl:h-50 mx-auto my-10 drop-shadow-2xl drop-shadow-black bg-white/90 rounded-full"
           />
 
-          <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 text-white  py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
+          <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 text-white  py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
             Weehena Group of Companies
           </h1>
         </motion.div>
