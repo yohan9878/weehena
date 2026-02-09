@@ -103,7 +103,7 @@ export default function Home() {
           />
 
           <h1 className="flex mx-4 md:mx-auto w-fit px-2 md:px-4 text-white  py-1 justify-center drop-shadow-xl drop-shadow-black text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl font-sans font-bold mb-10 text-red-white transition ">
-            WEEHENA GROUP OF COMPANIES
+            Weehena Group of Companies
           </h1>
         </motion.div>
         <motion.div
