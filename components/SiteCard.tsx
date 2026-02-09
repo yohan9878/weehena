@@ -4,9 +4,10 @@ type Props = {
   name: string;
   url: string;
   img: string;
+  site: string;
 };
 
-export default function SiteCard({ name, url, img }: Props) {
+export default function SiteCard({ name, url, img, site }: Props) {
   return (
     <div className="flex mx-auto justify-center flex-col lg:flex-col-2 w-fit h-20 md:w-100 lg:w-100 lg:h-25 xl:w-100 xl:h-25 mb-2 rounded-full xl:hover:shadow-2xl bg-white/80 xl:hover:bg-white xl:hover:shadow-red-100 xl:duration-300 xl:transform xl:hover:scale-110 xl:ease-in-out transition">
       <a href={url} target="_blank" rel="noopener noreferrer">
@@ -23,7 +24,7 @@ export default function SiteCard({ name, url, img }: Props) {
               {name}
             </h2>
             <p className="text-xs w-70  md:w-70 text-left font-sans font-semibold text-gray-600">
-              {url}
+              {site}
             </p>
           </div>
         </div>

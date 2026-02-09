@@ -15,17 +15,20 @@ const sites = [
     name: "Weehena Farms",
     url: "https://weehenafarms.com",
     img: "/assets/farmslogo.png",
+    site: "www.weehenafarms.com",
   },
   {
     name: "Weehena Sausage",
     url: "https://weehenasausage.lk",
     img: "/assets/sausagelogo.png",
+    site: "www.weehenasausage.lk",
   },
 
   {
     name: "Weehena Animal Nutrition (Pvt) Ltd",
     url: "https://maps.app.goo.gl/ToMuVMiqWfCZrRg79",
     img: "/assets/wanLogo.jpg",
+    site: "Google Maps Location",
   },
 ];
 
