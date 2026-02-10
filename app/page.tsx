@@ -162,7 +162,7 @@ export default function Home() {
 
           {/* MOBILE  Grid */}
           {!isDesktop && (
-            <div className="grid mt-10 xl:grid-cols-5 justify-center gap-10">
+            <div className="grid mt-4 xl:grid-cols-5 justify-center gap-10">
               {otherCompanies.map((company) => (
                 <div key={company.name} className="transition">
                   <Image
@@ -181,6 +181,48 @@ export default function Home() {
           )}
         </div>
       </motion.div>
+
+      {/* footer */}
+      <div className="bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
+        <p className="mx-5">
+          &copy; {new Date().getFullYear()} Weehena Group of Companies. All
+          rights reserved.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-center py-2 mx-auto gap-2 w-fit">
+          <div className="flex gap-2 w-50 md:w-fit mx-auto">
+            <Image
+              src="/assets/fb.png"
+              alt="Facebook Icon"
+              width={22}
+              height={22}
+              className="size-5 my-auto mr-4 md:mr-0"
+            />
+            <a
+              href="https://www.facebook.com/WeehenaGroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black text-base hover:underline"
+            >
+              Weehena Group
+            </a>
+          </div>
+          <div className="flex gap-2 w-50 md:w-fit mx-auto">
+            <Image
+              src="/assets/tel.png"
+              alt="Telephone Icon"
+              width={20}
+              height={20}
+              className="size-5 my-auto mr-4 md:mr-0 "
+            />
+            <a
+              href="tel:+94322254209"
+              className="text-black text-base hover:underline"
+            >
+              032 2 254 209
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
