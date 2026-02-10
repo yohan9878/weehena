@@ -162,7 +162,7 @@ export default function Home() {
 
           {/* MOBILE  Grid */}
           {!isDesktop && (
-            <div className="grid mt-10 xl:grid-cols-5 justify-center gap-10">
+            <div className="grid mt-4 xl:grid-cols-5 justify-center gap-10">
               {otherCompanies.map((company) => (
                 <div key={company.name} className="transition">
                   <Image
