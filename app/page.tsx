@@ -181,41 +181,44 @@ export default function Home() {
           )}
         </div>
       </motion.div>
+
       {/* footer */}
-      <div className="bg-gray-50 text:sm xl:text-lg text-red-900 font-sans font font-semibold text-center mx-auto my-auto pt-10 pb-4 w-screen">
+      <div className="bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
         <p className="mx-5">
           &copy; {new Date().getFullYear()} Weehena Group of Companies. All
           rights reserved.
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center py-4 mx-auto gap-2 w-fit">
-          <div className="flex justify-center items-center gap-2 w-60 xl:w-fit mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-center py-2 mx-auto gap-2 w-fit">
+          <div className="flex gap-2 w-50 md:w-fit mx-auto">
             <Image
-              src="/assets/fbIcon.png"
+              src="/assets/fb.png"
               alt="Facebook Icon"
-              width={30}
-              height={30}
+              width={22}
+              height={22}
+              className="size-5 my-auto mr-4 md:mr-0"
             />
             <a
               href="https://www.facebook.com/WeehenaGroup"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 text-base hover:underline"
+              className="text-black text-base hover:underline"
             >
               Weehena Group
             </a>
           </div>
-          <div className="flex justify-center items-center gap-2 w-60 xl:w-fit mx-auto">
+          <div className="flex gap-2 w-50 md:w-fit mx-auto">
             <Image
-              src="/assets/telIcon.png"
+              src="/assets/tel.png"
               alt="Telephone Icon"
               width={20}
               height={20}
+              className="size-5 my-auto mr-4 md:mr-0 "
             />
             <a
               href="tel:+94322254209"
-              className="text-gray-800 text-base hover:underline"
+              className="text-black text-base hover:underline"
             >
-              +94 322 254 209
+              032 2 254 209
             </a>
           </div>
         </div>
