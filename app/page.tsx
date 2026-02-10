@@ -181,6 +181,45 @@ export default function Home() {
           )}
         </div>
       </motion.div>
+      {/* footer */}
+      <div className="bg-white text:sm xl:text-lg text-red-900 font-sans font font-semibold text-center mx-auto my-auto pt-10 pb-4 w-screen">
+        <p className="mx-5">
+          &copy; {new Date().getFullYear()} Weehena Group of Companies. All
+          rights reserved.
+        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center py-4 mx-auto gap-2 w-fit">
+          <div className="flex justify-center items-center gap-2 w-60 xl:w-fit mx-auto">
+            <Image
+              src="/assets/fbIcon.png"
+              alt="Facebook Icon"
+              width={30}
+              height={30}
+            />
+            <a
+              href="https://www.facebook.com/WeehenaGroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 text-base hover:underline"
+            >
+              Weehena Group
+            </a>
+          </div>
+          <div className="flex justify-center items-center gap-2 w-60 xl:w-fit mx-auto">
+            <Image
+              src="/assets/telIcon.png"
+              alt="Telephone Icon"
+              width={20}
+              height={20}
+            />
+            <a
+              href="tel:+94322254209"
+              className="text-gray-800 text-base hover:underline"
+            >
+              +94 322 254 209
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
