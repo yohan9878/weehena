@@ -182,7 +182,7 @@ export default function Home() {
         </div>
       </motion.div>
       {/* footer */}
-      <div className="bg-white text:sm xl:text-lg text-red-900 font-sans font font-semibold text-center mx-auto my-auto pt-10 pb-4 w-screen">
+      <div className="bg-gray-50 text:sm xl:text-lg text-red-900 font-sans font font-semibold text-center mx-auto my-auto pt-10 pb-4 w-screen">
         <p className="mx-5">
           &copy; {new Date().getFullYear()} Weehena Group of Companies. All
           rights reserved.
