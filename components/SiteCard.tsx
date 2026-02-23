@@ -11,7 +11,7 @@ export default function SiteCard({ name, url, img, site }: Props) {
   return (
     <div className="flex mx-auto justify-center flex-col lg:flex-col-2 w-fit h-20 md:w-100 lg:w-100 lg:h-25 xl:w-100 xl:h-25 mb-2 rounded-full xl:hover:shadow-2xl bg-white/80 xl:hover:bg-white xl:hover:shadow-red-100 xl:duration-300 xl:transform xl:hover:scale-110 xl:ease-in-out transition">
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <div className="flex px-4 mx-auto gap-2 sm:gap-0 h-25">
+        <div className="flex px-4 mx-auto gap-2 h-25">
           <Image
             src={img}
             width={100}
