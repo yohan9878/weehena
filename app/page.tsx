@@ -65,7 +65,7 @@ const otherCompanies = [
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const isDesktop = useMediaQuery({ minWidth: 1536 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   useEffect(() => setMounted(true), []);
 
