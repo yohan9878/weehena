@@ -77,7 +77,7 @@ export default function Home() {
         initial={mounted && isDesktop ? { opacity: 0, y: -75 } : undefined}
         animate={mounted && isDesktop ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 3, ease: "easeOut" }}
-        className="relative content-center flex flex-col justify-center mx-auto my-auto md:mx-auto py-10 bg-center bg-black/50 min-w-screen min-h-screen bg-cover bg-blend-darken"
+        className="relative content-center flex flex-col justify-center mx-auto my-auto md:mx-auto py-10 bg-center bg-black/50 w-screen min-h-screen bg-cover bg-blend-darken"
         style={{ backgroundImage: "url('/assets/companyRainbow.png')" }}
       >
         <motion.div
@@ -117,7 +117,7 @@ export default function Home() {
                 }
               : undefined
           }
-          className="grid 2xl:justify-stretch 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 w-fit mx-auto gap-8 drop-shadow-2xl mt-5 2xl:mb-20 xl:mb-10 mb-20 px-4"
+          className="grid 2xl:justify-stretch 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 w-fit mx-auto gap-8 drop-shadow-2xl mt-5 2xl:mb-20 xl:mb-10 lg:mb-5 mb-20 px-4"
         >
           {sites.map((site) => (
             <SiteCard key={site.name} {...site} />
@@ -125,7 +125,7 @@ export default function Home() {
         </motion.div>
 
         {/* Other companies */}
-        <div className="2xl:absolute bottom-0 content-center px-10 xl:px-0 md:pt-10 pb-0 mx-auto mt-10 my-auto w-full overflow-hidden">
+        <div className="2xl:absolute bottom-0 content-center px-10 xl:px-0 md:pt-10 pb-0 mx-auto mt-10 mb-10 w-full overflow-hidden">
           {/* DESKTOP Infinite Scroll */}
           {isDesktop && (
             <motion.div
@@ -184,39 +184,46 @@ export default function Home() {
 
       {/* footer */}
       <div className="bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
+        {/* <Image
+          src="/assets/netLogo.png"
+          alt="Telephone Icon"
+          width={200}
+          height={200}
+          className="w-50 h-35 mx-auto mb-4  md:mb-6 lg:mb-8"
+        /> */}
         <p className="mx-5">
           &copy; {new Date().getFullYear()} Weehena Group of Companies. All
           rights reserved.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center py-2 mx-auto gap-2 w-fit">
-          <div className="flex gap-2 w-50 md:w-fit mx-auto">
+          <div className=" flex gap-2 w-50 md:w-fit mx-auto">
             <Image
-              src="/assets/fb.png"
+              src="/assets/facebook.png"
               alt="Facebook Icon"
               width={22}
               height={22}
-              className="size-5 my-auto mr-4 md:mr-0"
+              className="size-7 my-auto mr-4 md:mr-0"
             />
             <a
               href="https://www.facebook.com/WeehenaGroup"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black text-base hover:underline"
+              className="text-red-950 text-base my-auto"
             >
               Weehena Group
             </a>
           </div>
-          <div className="flex gap-2 w-50 md:w-fit mx-auto">
+          <div className=" flex gap-2 w-50 md:w-fit mx-auto">
             <Image
-              src="/assets/tel.png"
+              src="/assets/tel2.png"
               alt="Telephone Icon"
               width={20}
               height={20}
-              className="size-5 my-auto mr-4 md:mr-0 "
+              className="w-6.5 h-6 my-auto mr-4 md:mr-0 "
             />
             <a
               href="tel:+94322254209"
-              className="text-black text-base hover:underline"
+              className="text-red-950 text-base lg:my-auto"
             >
               032 2 254 209
             </a>
