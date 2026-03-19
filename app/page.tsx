@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import SiteCard from "../components/SiteCard";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 type otherCompanies = {
   name: string;
@@ -67,6 +68,7 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
@@ -78,7 +80,7 @@ export default function Home() {
         animate={mounted && isDesktop ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 3, ease: "easeOut" }}
         className="relative content-center flex flex-col justify-center mx-auto my-auto md:mx-auto py-10 bg-center bg-black/50 w-screen min-h-screen bg-cover bg-blend-darken"
-        style={{ backgroundImage: "url('/assets/companyRainbow.png')" }}
+        style={{ backgroundImage: "url('/assets/companyRainbow.png')"  }}
       >
         <motion.div
           initial={mounted && isDesktop ? { opacity: 0, scale: 0 } : undefined}
@@ -197,13 +199,15 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center py-2 mx-auto gap-2 w-fit">
           <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-            <Image
-              src="/assets/facebook.png"
-              alt="Facebook Icon"
-              width={22}
-              height={22}
-              className="size-7 my-auto mr-4 md:mr-0"
-            />
+            <Link href={"https://www.facebook.com/WeehenaGroup"}>
+              <Image
+                src="/assets/facebook.png"
+                alt="Facebook Icon"
+                width={22}
+                height={22}
+                className="size-7 my-auto mr-4 md:mr-0"
+              />
+            </Link>
             <a
               href="https://www.facebook.com/WeehenaGroup"
               target="_blank"
@@ -214,13 +218,15 @@ export default function Home() {
             </a>
           </div>
           <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-            <Image
-              src="/assets/tel2.png"
-              alt="Telephone Icon"
-              width={20}
-              height={20}
-              className="w-6.5 h-6 my-auto mr-4 md:mr-0 "
-            />
+            <Link href={"tel:+94322254209"}>
+              <Image
+                src="/assets/tel2.png"
+                alt="Telephone Icon"
+                width={20}
+                height={20}
+                className="w-6.5 h-6 my-auto mr-4 md:mr-0 "
+              />
+            </Link>
             <a
               href="tel:+94322254209"
               className="text-red-950 text-base lg:my-auto"
