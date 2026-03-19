@@ -18,6 +18,7 @@ export default function SiteCard({ name, url, img, site }: Props) {
             height={100}
             alt="logos"
             className="my-auto rounded-xl w-10 h-10 lg:w-15 lg:h-15 xl:w-15 xl:h-15"
+            loading="eager"
           />
           <div className="flex flex-col mx-auto my-auto">
             <h2 className="text-sm md:text-lg lg:text-xl w-70 md:w-70 text-left font-sans text-red-900  font-bold">
