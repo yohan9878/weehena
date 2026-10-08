@@ -101,6 +101,7 @@ export default function Home() {
             alt="Company Logo"
             width={200}
             height={200}
+            loading="eager"
             className="w-30 h-30 md:w-40 md:h-40 lg:w-50 lg:h-50 xl:w-50 xl:h-50 mx-auto my-10 drop-shadow-2xl drop-shadow-black bg-white/90 rounded-full"
           />
 
