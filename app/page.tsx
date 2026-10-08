@@ -80,7 +80,7 @@ export default function Home() {
         animate={mounted && isDesktop ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 3, ease: "easeOut" }}
         className="relative content-center flex flex-col justify-center mx-auto my-auto md:mx-auto py-10 bg-center bg-black/50 w-screen min-h-screen bg-cover bg-blend-darken"
-        style={{ backgroundImage: "url('/assets/companyRainbow.png')"  }}
+        style={{ backgroundImage: "url('/assets/companyRainbow.png')" }}
       >
         <motion.div
           initial={mounted && isDesktop ? { opacity: 0, scale: 0 } : undefined}
@@ -197,11 +197,11 @@ export default function Home() {
           &copy; {new Date().getFullYear()} Weehena Group of Companies. All
           rights reserved.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-center py-2 mx-auto gap-2 w-fit">
+        <div className="grid grid-cols-1 md:grid-cols-4 justify-center py-2 mx-auto gap-2 w-fit">
           <div className=" flex gap-2 w-50 md:w-fit mx-auto">
             <Link href={"https://www.facebook.com/WeehenaGroup"}>
               <Image
-                src="/assets/facebook.png"
+                src="/assets/fb.png"
                 alt="Facebook Icon"
                 width={22}
                 height={22}
@@ -217,14 +217,51 @@ export default function Home() {
               Weehena Group
             </a>
           </div>
+           <div className=" flex gap-2 w-50 md:w-fit mx-auto">
+            <Link href={"https://www.facebook.com/weehena.farms/"}>
+              <Image
+                src="/assets/fb.png"
+                alt="Facebook Icon"
+                width={22}
+                height={22}
+                className="size-7 my-auto mr-4 md:mr-0"
+              />
+            </Link>
+            <a
+              href="https://www.facebook.com/weehena.farms/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-950 text-base my-auto"
+            >
+              Weehena Farms
+            </a>
+          </div>
+          {/* instagram */}
+          <div className=" flex gap-2 w-50 md:w-fit mx-auto">
+            <Link href={"https://www.instagram.com/weehena_sausage/"}>
+              <Image
+                src="/assets/insta.png"
+                alt="insta Icon"
+                width={22}
+                height={22}
+                className="size-7 my-auto mr-4 md:mr-0"
+              />
+            </Link>
+            <a
+              href={"https://www.instagram.com/weehena_sausage/"}
+              className="text-red-950 text-base lg:my-auto"
+            >
+              Weehena Sausage
+            </a>
+          </div>
           <div className=" flex gap-2 w-50 md:w-fit mx-auto">
             <Link href={"tel:+94322254209"}>
               <Image
-                src="/assets/tel2.png"
+                src="/assets/phone.png"
                 alt="Telephone Icon"
                 width={20}
                 height={20}
-                className="w-6.5 h-6 my-auto mr-4 md:mr-0 "
+                className="size-7 my-auto mr-4 md:mr-0 "
               />
             </Link>
             <a
