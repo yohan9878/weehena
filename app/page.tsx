@@ -186,91 +186,88 @@ export default function Home() {
       </motion.div>
 
       {/* footer */}
-      <div className="bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
-        {/* <Image
-          src="/assets/netLogo.png"
-          alt="Telephone Icon"
-          width={200}
-          height={200}
-          className="w-50 h-35 mx-auto mb-4  md:mb-6 lg:mb-8"
-        /> */}
-        <p className="mx-5">
-          &copy; {new Date().getFullYear()} Weehena Group of Companies. All
-          rights reserved.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-4 justify-center py-2 mx-auto gap-2 w-fit">
-          <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-            <Link href={"https://www.facebook.com/WeehenaGroup"}>
-              <Image
-                src="/assets/fb.png"
-                alt="Facebook Icon"
-                width={22}
-                height={22}
-                className="size-7 my-auto mr-4 md:mr-0"
-              />
-            </Link>
-            <a
-              href="https://www.facebook.com/WeehenaGroup"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-950 text-base my-auto"
-            >
-              Weehena Group
-            </a>
-          </div>
-           <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-            <Link href={"https://www.facebook.com/weehena.farms/"}>
-              <Image
-                src="/assets/fb.png"
-                alt="Facebook Icon"
-                width={22}
-                height={22}
-                className="size-7 my-auto mr-4 md:mr-0"
-              />
-            </Link>
-            <a
-              href="https://www.facebook.com/weehena.farms/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-950 text-base my-auto"
-            >
-              Weehena Farms
-            </a>
-          </div>
-          {/* instagram */}
-          <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-            <Link href={"https://www.instagram.com/weehena_sausage/"}>
-              <Image
-                src="/assets/insta.png"
-                alt="insta Icon"
-                width={22}
-                height={22}
-                className="size-7 my-auto mr-4 md:mr-0"
-              />
-            </Link>
-            <a
-              href={"https://www.instagram.com/weehena_sausage/"}
-              className="text-red-950 text-base lg:my-auto"
-            >
-              Weehena Sausage
-            </a>
-          </div>
-          <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-            <Link href={"tel:+94322254209"}>
-              <Image
-                src="/assets/phone.png"
-                alt="Telephone Icon"
-                width={20}
-                height={20}
-                className="size-7 my-auto mr-4 md:mr-0 "
-              />
-            </Link>
-            <a
-              href="tel:+94322254209"
-              className="text-red-950 text-base lg:my-auto"
-            >
-              032 2 254 209
-            </a>
+      <div className="relative bg-[url('/assets/footerBg.png')] bg-cover bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
+        {/* overlay for text readability */}
+        <div className="absolute inset-0 bg-white/30" aria-hidden="true" />
+        <div className="relative z-10">
+          <p className="mx-5">
+            &copy; {new Date().getFullYear()} Weehena Group of Companies. All
+            rights reserved.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 justify-center py-2 mx-auto gap-2 w-fit">
+            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
+              <Link href={"https://www.facebook.com/WeehenaGroup"}>
+                <Image
+                  src="/assets/fb.png"
+                  alt="Facebook Icon"
+                  width={22}
+                  height={22}
+                  className="size-7 my-auto mr-4 md:mr-0"
+                />
+              </Link>
+              <a
+                href="https://www.facebook.com/WeehenaGroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-950 text-base my-auto"
+              >
+                Weehena Group
+              </a>
+            </div>
+            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
+              <Link href={"https://www.facebook.com/weehena.farms/"}>
+                <Image
+                  src="/assets/fb.png"
+                  alt="Facebook Icon"
+                  width={22}
+                  height={22}
+                  className="size-7 my-auto mr-4 md:mr-0"
+                />
+              </Link>
+              <a
+                href="https://www.facebook.com/weehena.farms/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-950 text-base my-auto"
+              >
+                Weehena Farms
+              </a>
+            </div>
+            {/* instagram */}
+            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
+              <Link href={"https://www.instagram.com/weehena_sausage/"}>
+                <Image
+                  src="/assets/insta.png"
+                  alt="insta Icon"
+                  width={22}
+                  height={22}
+                  className="size-7 my-auto mr-4 md:mr-0"
+                />
+              </Link>
+              <a
+                href={"https://www.instagram.com/weehena_sausage/"}
+                className="text-red-950 text-base lg:my-auto"
+              >
+                Weehena Sausage
+              </a>
+            </div>
+            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
+              <Link href={"tel:+94322254209"}>
+                <Image
+                  src="/assets/phone.png"
+                  alt="Telephone Icon"
+                  width={20}
+                  height={20}
+                  className="size-7 my-auto mr-4 md:mr-0 "
+                />
+              </Link>
+              <a
+                href="tel:+94322254209"
+                className="text-red-950 text-base lg:my-auto"
+              >
+                032 2 254 209
+              </a>
+            </div>
           </div>
         </div>
       </div>
