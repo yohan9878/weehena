@@ -64,6 +64,51 @@ const otherCompanies = [
   },
 ];
 
+const footerLinks = [
+  {
+    href: "https://www.facebook.com/WeehenaGroup",
+    icon: "/assets/fb.png",
+    alt: "Facebook",
+    label: "Weehena Group",
+    external: true,
+  },
+  {
+    href: "https://www.facebook.com/weehena.farms/",
+    icon: "/assets/fb.png",
+    alt: "Facebook",
+    label: "Weehena Farms",
+    external: true,
+  },
+  {
+    href: "https://www.facebook.com/p/Weehena-Sausage-61585445033293/",
+    icon: "/assets/fb.png",
+    alt: "Facebook",
+    label: "Weehena Sausage",
+    external: true,
+  },
+  {
+    href: "https://www.instagram.com/weehenafarms/",
+    icon: "/assets/insta.png",
+    alt: "Instagram",
+    label: "Weehena Farms",
+    external: true,
+  },
+  {
+    href: "https://www.instagram.com/weehena_sausage/",
+    icon: "/assets/insta.png",
+    alt: "Instagram",
+    label: "Weehena Sausage",
+    external: true,
+  },
+  {
+    href: "tel:+94322254209",
+    icon: "/assets/phone.png",
+    alt: "Telephone",
+    label: "032 2 254 209",
+    external: false,
+  },
+];
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -169,10 +214,11 @@ export default function Home() {
               {otherCompanies.map((company) => (
                 <div key={company.name} className="transition">
                   <Image
-                    width={1000}
-                    height={1000}
+                    width={100}
+                    height={100}
                     alt={company.name}
                     src={company.img}
+                    loading="lazy"
                     className="mx-auto rounded-sm w-auto h-20 object-fill"
                   />
                   <p className="mx-auto text-white text-center font-semibold font-mono text-sm mt-2 text-shadow-2xl">
@@ -186,91 +232,36 @@ export default function Home() {
       </motion.div>
 
       {/* footer */}
-      <div className="relative bg-[url('/assets/footerBg.png')] bg-cover bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
-        {/* overlay for text readability */}
+      <footer className="bg-[url('/assets/footerBg.png')] bg-cover bg-center bg-white text-sm md:text-lg text-red-900 font-sans font-medium text-center w-full px-4 pt-8 pb-4">
+        <p>
+          &copy; {new Date().getFullYear()} Weehena Group of Companies. All
+          rights reserved.
+        </p>
 
-        <div className="relative z-10">
-          <p className="mx-5">
-            &copy; {new Date().getFullYear()} Weehena Group of Companies. All
-            rights reserved.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 justify-center py-2 mx-auto gap-2 w-fit">
-            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-              <Link href={"https://www.facebook.com/WeehenaGroup"}>
-                <Image
-                  src="/assets/fb.png"
-                  alt="Facebook Icon"
-                  width={22}
-                  height={22}
-                  className="size-7 my-auto mr-4 md:mr-0"
-                />
-              </Link>
+        <ul className="flex flex-col items-start gap-3 w-fit mx-auto py-4 sm:flex-row sm:flex-wrap sm:justify-center sm:items-center sm:w-full sm:max-w-3xl sm:gap-x-8">
+          {footerLinks.map(({ href, icon, alt, label, external }) => (
+            <li key={href}>
               <a
-                href="https://www.facebook.com/WeehenaGroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-red-950 text-base my-auto"
+                href={href}
+                {...(external && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
+                className="flex items-center gap-2 text-red-950 text-base hover:underline"
               >
-                Weehena Group
-              </a>
-            </div>
-            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-              <Link href={"https://www.facebook.com/weehena.farms/"}>
                 <Image
-                  src="/assets/fb.png"
-                  alt="Facebook Icon"
-                  width={22}
-                  height={22}
-                  className="size-7 my-auto mr-4 md:mr-0"
+                  src={icon}
+                  alt={`${alt} icon`}
+                  width={28}
+                  height={28}
+                  className="size-7 shrink-0"
                 />
-              </Link>
-              <a
-                href="https://www.facebook.com/weehena.farms/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-red-950 text-base my-auto"
-              >
-                Weehena Farms
+                <span>{label}</span>
               </a>
-            </div>
-            {/* instagram */}
-            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-              <Link href={"https://www.instagram.com/weehena_sausage/"}>
-                <Image
-                  src="/assets/insta.png"
-                  alt="insta Icon"
-                  width={22}
-                  height={22}
-                  className="size-7 my-auto mr-4 md:mr-0"
-                />
-              </Link>
-              <a
-                href={"https://www.instagram.com/weehena_sausage/"}
-                className="text-red-950 text-base lg:my-auto"
-              >
-                Weehena Sausage
-              </a>
-            </div>
-            <div className=" flex gap-2 w-50 md:w-fit mx-auto">
-              <Link href={"tel:+94322254209"}>
-                <Image
-                  src="/assets/phone.png"
-                  alt="Telephone Icon"
-                  width={20}
-                  height={20}
-                  className="size-7 my-auto mr-4 md:mr-0 "
-                />
-              </Link>
-              <a
-                href="tel:+94322254209"
-                className="text-red-950 text-base lg:my-auto"
-              >
-                032 2 254 209
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            </li>
+          ))}
+        </ul>
+      </footer>
     </div>
   );
 }
