@@ -152,6 +152,7 @@ export default function Home() {
                       alt={company.name}
                       width={200}
                       height={200}
+                      loading="eager"
                       className="h-20 w-auto object-contain rounded-sm"
                     />
                     <p className="mt-2 text-white w-80 xl:w-100 text-center font-semibold font-mono text-lg text-shadow-2xl">
@@ -188,7 +189,7 @@ export default function Home() {
       {/* footer */}
       <div className="relative bg-[url('/assets/footerBg.png')] bg-cover bg-white text:sm md:text-lg text-red-900 font-sans font font-medium text-center mx-auto my-auto pt-8 pb-4 w-screen">
         {/* overlay for text readability */}
-        <div className="absolute inset-0 bg-white/30" aria-hidden="true" />
+          
         <div className="relative z-10">
           <p className="mx-5">
             &copy; {new Date().getFullYear()} Weehena Group of Companies. All
