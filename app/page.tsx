@@ -124,7 +124,7 @@ export default function Home() {
         initial={mounted && isDesktop ? { opacity: 0, y: -75 } : undefined}
         animate={mounted && isDesktop ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 3, ease: "easeOut" }}
-        className="relative content-center flex flex-col justify-center mx-auto my-auto md:mx-auto py-10 bg-center bg-black/50 w-screen min-h-screen bg-cover bg-blend-darken bg-[url('/assets/mobileBg.jpg')] lg:bg-[url('/assets/companyRainbow.png')]"
+        className="relative content-center flex flex-col justify-center mx-auto my-auto md:mx-auto py-10 bg-center bg-fixed  bg-black/50 w-screen min-h-screen bg-cover bg- bg-blend-darken bg-[url('/assets/mobileBg.jpg')] lg:bg-[url('/assets/companyRainbow.png')]"
       >
         <motion.div
           initial={mounted && isDesktop ? { opacity: 0, scale: 0 } : undefined}
